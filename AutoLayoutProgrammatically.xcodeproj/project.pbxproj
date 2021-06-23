@@ -13,6 +13,7 @@
 		AF306BC526819EC9006727CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF306BC326819EC9006727CC /* Main.storyboard */; };
 		AF306BC726819ECB006727CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF306BC626819ECB006727CC /* Assets.xcassets */; };
 		AF306BCA26819ECB006727CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF306BC826819ECB006727CC /* LaunchScreen.storyboard */; };
+		AF306BD2268206A8006727CC /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF306BD1268206A8006727CC /* SwipingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AF306BC626819ECB006727CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF306BC926819ECB006727CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF306BCB26819ECB006727CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF306BD1268206A8006727CC /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				AF306BC626819ECB006727CC /* Assets.xcassets */,
 				AF306BC826819ECB006727CC /* LaunchScreen.storyboard */,
 				AF306BCB26819ECB006727CC /* Info.plist */,
+				AF306BD1268206A8006727CC /* SwipingController.swift */,
 			);
 			path = AutoLayoutProgrammatically;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				AF306BC226819EC9006727CC /* ViewController.swift in Sources */,
 				AF306BBE26819EC9006727CC /* AppDelegate.swift in Sources */,
 				AF306BC026819EC9006727CC /* SceneDelegate.swift in Sources */,
+				AF306BD2268206A8006727CC /* SwipingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

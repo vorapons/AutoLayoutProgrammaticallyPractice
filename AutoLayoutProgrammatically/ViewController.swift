@@ -98,17 +98,6 @@ class ViewController: UIViewController {
     }
     
     fileprivate func setupBottomControl() {
-//        view.addSubview(previousButton)
-//        previousButton.backgroundColor = .red
-//        previousButton.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
-//        let grayView = UIView()
-//        grayView.backgroundColor = .gray
-//
-//        let blackView = UIView()
-//        blackView.backgroundColor = .black
-//
-//        let whiteView = UIView()
-//        whiteView.backgroundColor = .white
                 
         let bottomControlsStackView = UIStackView(arrangedSubviews: [previousButton,pageControl,nextButton])
         bottomControlsStackView.distribution = .fillProportionally
