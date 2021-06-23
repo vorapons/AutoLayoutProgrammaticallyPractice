@@ -85,8 +85,8 @@ class PageCell : UICollectionViewCell{
         descriptionTextViewByAttributed.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor).isActive = true
         descriptionTextViewByAttributed.leftAnchor.constraint(equalTo: leftAnchor, constant: 15.0).isActive = true
         descriptionTextViewByAttributed.rightAnchor.constraint(equalTo: rightAnchor, constant: -15.0).isActive = true
-  }
-    
+    }
+
     required init?(coder aDecoder : NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
