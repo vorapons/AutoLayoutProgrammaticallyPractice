@@ -13,6 +13,13 @@ extension UIColor {
 
 class ViewController: UIViewController {
 
+    
+    // Note : How to use Autolayout Programmatically
+    // 1: create component in view object in  ViewController
+    // 2: add to subview of view inside ViewController + call 'translatesAutorxx = false'
+    // 3: create 'setLayout' that set all constraint
+    
+    
     // let's avoid polluting viewDidload
     let rainbowImageView : UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "rainbow_header"))
@@ -86,7 +93,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         // here 's our entry point into our app
-//        view.backgroundColor = .yellow
                
         view.addSubview(descriptionTextViewByAttributed)
         setupLayout()
@@ -105,12 +111,12 @@ class ViewController: UIViewController {
         bottomControlsStackView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bottomControlsStackView)
         
+        // #Example : activate constraint in set
         NSLayoutConstraint.activate([
             bottomControlsStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 20),
             bottomControlsStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -20),
             bottomControlsStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: 0),
             bottomControlsStackView.heightAnchor.constraint(equalToConstant: 50),
-//            pageControl.widthAnchor.constraint(equalToConstant: 200)
         ])
     }
     
@@ -120,8 +126,11 @@ class ViewController: UIViewController {
         let topImageContainerView = UIView()
         topImageContainerView.backgroundColor = .blue
         view.addSubview(topImageContainerView)
-//        topImageContainerView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        // Enable AutoLayout
+
+        // #Example : using non-autolayout by set frame
+        // topImageContainerView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        
+        // #Example : Enable AutoLayout command
         topImageContainerView.translatesAutoresizingMaskIntoConstraints = false
         topImageContainerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         topImageContainerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true

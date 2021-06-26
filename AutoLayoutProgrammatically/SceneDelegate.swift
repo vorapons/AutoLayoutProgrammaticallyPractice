@@ -21,13 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
+        //        #Example create instantly viewcontroller to run in app
+        //        let randomViewController = UIViewController()
+        //        randomViewController.view.backgroundColor = .purple
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let swipingController = SwipingController(collectionViewLayout: layout)
-//        let randomViewController = UIViewController()
-//        randomViewController.view.backgroundColor = .purple
-        window?.rootViewController = swipingController
         
+        window?.rootViewController = swipingController
         window?.makeKeyAndVisible()
     }
 

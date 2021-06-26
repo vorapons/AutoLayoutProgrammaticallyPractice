@@ -16,6 +16,8 @@
 		AF306BD2268206A8006727CC /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF306BD1268206A8006727CC /* SwipingController.swift */; };
 		AF306BD42682C4CB006727CC /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF306BD32682C4CB006727CC /* PageCell.swift */; };
 		AF306BD62682CFD5006727CC /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF306BD52682CFD5006727CC /* Page.swift */; };
+		AF306BD82682EDDE006727CC /* SwipingControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF306BD72682EDDE006727CC /* SwipingControllerExtension.swift */; };
+		AF306BDA2682EEB8006727CC /* SwipingController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF306BD92682EEB8006727CC /* SwipingController+UICollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		AF306BD1268206A8006727CC /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		AF306BD32682C4CB006727CC /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		AF306BD52682CFD5006727CC /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		AF306BD72682EDDE006727CC /* SwipingControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingControllerExtension.swift; sourceTree = "<group>"; };
+		AF306BD92682EEB8006727CC /* SwipingController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+UICollectionView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,16 +66,18 @@
 		AF306BBC26819EC9006727CC /* AutoLayoutProgrammatically */ = {
 			isa = PBXGroup;
 			children = (
+				AF306BC626819ECB006727CC /* Assets.xcassets */,
 				AF306BBD26819EC9006727CC /* AppDelegate.swift */,
 				AF306BBF26819EC9006727CC /* SceneDelegate.swift */,
 				AF306BC126819EC9006727CC /* ViewController.swift */,
 				AF306BC326819EC9006727CC /* Main.storyboard */,
-				AF306BC626819ECB006727CC /* Assets.xcassets */,
 				AF306BC826819ECB006727CC /* LaunchScreen.storyboard */,
 				AF306BCB26819ECB006727CC /* Info.plist */,
+				AF306BD72682EDDE006727CC /* SwipingControllerExtension.swift */,
 				AF306BD1268206A8006727CC /* SwipingController.swift */,
 				AF306BD52682CFD5006727CC /* Page.swift */,
 				AF306BD32682C4CB006727CC /* PageCell.swift */,
+				AF306BD92682EEB8006727CC /* SwipingController+UICollectionView.swift */,
 			);
 			path = AutoLayoutProgrammatically;
 			sourceTree = "<group>";
@@ -146,12 +152,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF306BDA2682EEB8006727CC /* SwipingController+UICollectionView.swift in Sources */,
 				AF306BC226819EC9006727CC /* ViewController.swift in Sources */,
 				AF306BD42682C4CB006727CC /* PageCell.swift in Sources */,
 				AF306BD62682CFD5006727CC /* Page.swift in Sources */,
 				AF306BBE26819EC9006727CC /* AppDelegate.swift in Sources */,
 				AF306BC026819EC9006727CC /* SceneDelegate.swift in Sources */,
 				AF306BD2268206A8006727CC /* SwipingController.swift in Sources */,
+				AF306BD82682EDDE006727CC /* SwipingControllerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

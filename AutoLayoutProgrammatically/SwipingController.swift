@@ -24,7 +24,7 @@ class SwipingController : UICollectionViewController, UICollectionViewDelegateFl
              headerText: "Join us today in our fun and games!4",
              bodyText: "\n\n\nAre you ready for loads and loads of fun? Don't wait any longer! We hope to see you in our stores soon.\n4")
     ]
-    
+
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let x = targetContentOffset.pointee.x // get end draging point
         print(x,view.frame.width, x / view.frame.width)
@@ -51,29 +51,7 @@ class SwipingController : UICollectionViewController, UICollectionViewDelegateFl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
- 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! PageCell
-
-        let page = pages[indexPath.item]
-//        let imageName = imageNames[indexPath.item]
-//        cell.rainbowImageView.image = UIImage(named: page.imageName)
-//        cell.descriptionTextViewByAttributed.text = page.headerText
-        // #Example
-        // How to add view to cell and Page Control
-        // definitely don't try this, it is a very bad idea
-        //        let imageView = UIImageView()
-        //        cell.addSubview(imageView)
-        // Correct way is define view in cell by set their own class then adjust data in cell
-        cell.page = page
-
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: view.frame.height)
-    }
-    
+  
     private let previousButton : UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Back",for: .normal)
@@ -83,6 +61,14 @@ class SwipingController : UICollectionViewController, UICollectionViewDelegateFl
         button.addTarget(self, action: #selector(handlePrevious), for: .touchUpInside)
         return button
     }()
+    
+    @objc private func handlePrevious() {
+        print("Trying to advanc to previous")
+        let previousIndex = pageControl.currentPage > 0 ? pageControl.currentPage - 1 : 0
+        pageControl.currentPage = previousIndex
+        let indexPath = IndexPath(item:previousIndex,section: 0)
+        collectionView?.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
+    }
     
     private let nextButton : UIButton = {
         let button = UIButton(type: .system)
@@ -102,16 +88,10 @@ class SwipingController : UICollectionViewController, UICollectionViewDelegateFl
         collectionView?.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
     }
     
-    @objc private func handlePrevious() {
-        print("Trying to advanc to previous")
-        let previousIndex = pageControl.currentPage > 0 ? pageControl.currentPage - 1 : 0
-        pageControl.currentPage = previousIndex
-        let indexPath = IndexPath(item:previousIndex,section: 0)
-        collectionView?.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
-    }
-    
     // Note : local var can't access class member so using 'lazy' keyword
-    private lazy var pageControl : UIPageControl = {
+    // Note2: Remove private to let class extension ease to access
+    //    private lazy var pageControl : UIPageControl = {
+    lazy var pageControl : UIPageControl = {
         let pc = UIPageControl()
         pc.currentPage = 0
         pc.numberOfPages = pages.count
